@@ -25,21 +25,13 @@ class CalculationController extends Controller
 
         if ($operator == 'addition') {
             $result = $value1 + $value2;
-        }
-
-        elseif ($operator == 'subtraction') {
+        } elseif ($operator == 'subtraction') {
             $result = $value1 - $value2;
-        } 
-
-        elseif ($operator == 'multiplication') {
+        } elseif ($operator == 'multiplication') {
             $result = $value1 * $value2;
-        } 
-
-        elseif ($operator == 'multiplication') {
+        } elseif ($operator == 'division') {
             $result = $value1 / $value2;
-        } 
-
-        else {
+        } else {
             $result = 'error';
         }
 
