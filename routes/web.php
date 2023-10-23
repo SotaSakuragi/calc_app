@@ -16,3 +16,12 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/calcs/{value1}/{operator}/{value2}', function ($value1, $operator, $value2) {
+    return view('message.calc', 
+    [
+        'value1' => $value1, 
+        'operator' => $operator, 
+        'value2' => $value2
+    ]);
+});
