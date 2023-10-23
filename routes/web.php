@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\CalculationController;
+use App\Http\Controllers\CalcController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,15 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/calcs/{value1}/{operator}/{value2}', function ($value1, $operator, $value2) {
-    return view(
-        'message.calculation',
-        [
-            'value1' => $value1,
-            'operator' => $operator,
-            'value2' => $value2
-        ]
-    );
-});
-
-Route::get('/contoroller/calcs/{value1}/{operator}/{value2}', [CalculationController::class, 'calculation']);
+Route::get('/calcs/{value1}/{operator}/{value2}', [CalcController::class, 'result']);

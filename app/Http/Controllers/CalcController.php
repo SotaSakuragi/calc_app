@@ -4,22 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class CalculationController extends Controller
+class CalcController extends Controller
 {
-    // public function calculation($value1, $operator, $value2)
-    // {
-    //     return view(
-    //         'message.calculation',
-    //         [
-    //             'value1' => $value1,
-    //             'operator' => $operator,
-    //             'value2' => $value2
-    //         ]
-    //     );
-    // }
-
-
-    public function calculation($value1, $operator, $value2)
+    public function result($value1, $operator, $value2)
     {
         $result = 0;
 
